@@ -22,7 +22,7 @@ defmodule Configurator.Storage do
   """
   @spec find(String.t) :: {:ok, Map.t} | :error
   def find(key) do
-    case full_key(key) |> get() do
+    case key |> full_key() |> get() do
       :undefined -> :error
       data -> {:ok, decode(data)}
     end
