@@ -41,6 +41,8 @@ defmodule Configurator.Mixfile do
     [
       {:maru, "~> 0.11"},
       {:maru_entity, "~> 0.2.0"},
+      {:exredis, "~> 0.2"},
+      {:poison, "~> 3.0"},
       {:ex_doc, "~> 0.14", only: :dev, runtime: false},
       {:credo, "~> 0.6", only: [:dev, :test]},
       {:espec, "~> 1.3", only: :test},

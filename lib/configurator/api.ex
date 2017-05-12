@@ -11,10 +11,6 @@ defmodule Configurator.API do
   alias Plug.Parsers.ParseError
   alias Maru.Exceptions.InvalidFormat
 
-  before do
-    plug Plug.Logger
-  end
-
   plug Plug.Parsers,
     pass: ["*/*"],
     json_decoder: Poison,
