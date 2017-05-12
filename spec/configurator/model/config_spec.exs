@@ -1,6 +1,4 @@
 defmodule Configurator.Model.ConfigSpec do
-  @moduledoc false
-
   use ESpec, async: false
 
   alias Configurator.Model.Config
