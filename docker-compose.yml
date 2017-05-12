@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  client_service:
+    build: .
+    command: "mix run --no-halt"
+    environment:
+      - MIX_ENV=prod
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - 9000:9000
+    links:
+      - redis
+
+  redis:
+    image: redis
